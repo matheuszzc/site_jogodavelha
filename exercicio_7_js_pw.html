@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Vetor</title>
+    <script>
+        var vetor = []; // Vetor para armazenar os valores inseridos
+
+        function adicionarValor() {
+            var valorInput = document.getElementById("valorInput");
+            var valor = parseInt(valorInput.value);
+
+            if (!isNaN(valor)) {
+                vetor.push(valor);
+                valorInput.value = ""; // Limpar o campo de entrada
+
+                alert("Valor adicionado ao vetor!");
+            } else {
+                alert("Por favor, insira um valor válido.");
+            }
+        }
+
+        function mostrarValores() {
+            if (vetor.length === 0) {
+                alert("O vetor está vazio.");
+            } else {
+                alert("Valores no vetor: " + vetor.join(", "));
+            }
+        }
+
+        function mostrarMaiorValor() {
+            if (vetor.length === 0) {
+                alert("O vetor está vazio.");
+            } else {
+                var maiorValor = Math.max(...vetor);
+                alert("Maior valor no vetor: " + maiorValor);
+            }
+        }
+
+        function mostrarMenorValor() {
+            if (vetor.length === 0) {
+                alert("O vetor está vazio.");
+            } else {
+                var menorValor = Math.min(...vetor);
+                alert("Menor valor no vetor: " + menorValor);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Manipulação de Vetor</h1>
+    <label for="valorInput">Informe um valor:</label>
+    <input type="text" id="valorInput" />
+    <button onclick="adicionarValor()">Adicionar Valor</button>
+    <br>
+    <button onclick="mostrarValores()">Mostrar Valores</button>
+    <button onclick="mostrarMaiorValor()">Maior Valor</button>
+    <button onclick="mostrarMenorValor()">Menor Valor</button>
+</body>
+</html>

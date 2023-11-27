@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>exercício Js</title>
+</head>
+<body>
+    <script>
+        grau=parseFloat(prompt("Qual você deseja converter, 1-F(Fahrenheit) ou 2-C(Celsius)?(Digite 1 ou 2)"));
+        
+        if(grau==1){
+            val1=parseInt(prompt("Digite a temperatura em Fahrenheit"));
+           var x = (val1-32) / 1.8
+            alert("°C:"+x);
+        }else if(grau==2){
+            val1=parseInt(prompt("Digite a temperatura em Celsius"));
+           var x = val1 * 1.8 + 32
+            alert("°F:"+x);
+        }else
+        alert("Ocorreu um erro");
+    </script>
+</body>
+</html>
